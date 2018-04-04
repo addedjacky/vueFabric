@@ -71,7 +71,7 @@
 				})
 			},
 			loginBywx:function(){
-				_this.$store.commit('saveUserId',"");
+				this.$store.commit('saveUserId',"");
 				window.location.href = "http://mz.wesetup.cn/api/v1/user/wechat/login?redirectUrl=http://mz.wesetup.cn/personal";
 //				loginBywx();
 			}
