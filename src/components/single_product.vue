@@ -4,6 +4,7 @@
         <div class="search-box">
         		<el-autocomplete
 			      class="inline-input "
+			      style="width:auto"
 			      v-model="keywords"
 			      :fetch-suggestions="querySearch"
 			      placeholder="请输入内容"
