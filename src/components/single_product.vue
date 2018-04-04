@@ -10,7 +10,7 @@
 			      :trigger-on-focus="false"
 			      @select="handleSelect"
 			    ></el-autocomplete>
-			    <el-button type="primary" @click="searchList(keywords)"   >筛选</el-button>
+			    <el-button type="primary" @click="searchList(keywords)" >筛选</el-button>
                 <!--<input type="text" v-model="keywords" class="search" placeholder="请输入">-->
                 <!--<span class="btn" @click="searchList(keywords)" >筛选</span>-->
         </div>
@@ -208,6 +208,9 @@ export default {
 };
 </script>
 <style rel="stylesheet/scss" lang="scss">
+.inline-input{
+	width:auto;
+}
 .m-singp {
   background: #f5f5f5;
   .wrap {
