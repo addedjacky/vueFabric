@@ -198,7 +198,7 @@ export default {
     // 历史记录
     undo() {
       let _self = this;
-        console.log('数组长度'+this.config.canvasState.length+'当前步骤'+this.config.currentStateIndex)
+        // console.log('数组长度'+this.config.canvasState.length+'当前步骤'+this.config.currentStateIndex)
         this.$store.commit("setOptionSelect", false);
         this.$store.commit("setCutSelect", false);
       if (this.config.undoFinishedStatus) {
@@ -239,7 +239,7 @@ export default {
     },
     redo() {
       let _self = this;
-      console.log('数组长度'+this.config.canvasState.length+'当前步骤'+this.config.currentStateIndex)
+      // console.log('数组长度'+this.config.canvasState.length+'当前步骤'+this.config.currentStateIndex)
       // if (this.config.redoFinishedStatus) {
         if ( this.config.canvasState.length > this.config.currentStateIndex && this.config.canvasState.length != 0) {
           this.config.redoFinishedStatus = 0;
@@ -254,7 +254,7 @@ export default {
               _self.config.redoStatus = false;
               _self.config.currentStateIndex += 1;
               _self.config.redoFinishedStatus = 1;
-              console.log('我倒低了')
+              // console.log('我倒低了')
             }
           );
           setTimeout(() => {
