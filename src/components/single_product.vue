@@ -4,13 +4,14 @@
         <div class="search-box">
         		<el-autocomplete
 			      class="inline-input "
+			      style="width:auto"
 			      v-model="keywords"
 			      :fetch-suggestions="querySearch"
 			      placeholder="请输入内容"
 			      :trigger-on-focus="false"
 			      @select="handleSelect"
 			    ></el-autocomplete>
-			    <el-button type="primary" @click="searchList(keywords)"   >筛选</el-button>
+			    <el-button type="primary" @click="searchList(keywords)" >筛选</el-button>
                 <!--<input type="text" v-model="keywords" class="search" placeholder="请输入">-->
                 <!--<span class="btn" @click="searchList(keywords)" >筛选</span>-->
         </div>
@@ -208,6 +209,9 @@ export default {
 };
 </script>
 <style rel="stylesheet/scss" lang="scss">
+.inline-input{
+	width:auto;
+}
 .m-singp {
   background: #f5f5f5;
   .wrap {
@@ -218,7 +222,7 @@ export default {
       overflow: hidden;
       width:1440px;
       margin: 0 auto;
-      .el-autocomplet{
+      .el-autocomplete{
         width:80%;
       }
       .search {

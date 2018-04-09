@@ -86,7 +86,7 @@
 </template>
 
 <script>
-	import {getSmsCode,bindPhone,updateUser,getUser,getUserId} from "@/api/user";
+	import {getSmsCode,bindPhone,updateUser,getUser} from "@/api/user";
 	export default{
 		data(){
 			return {
@@ -105,7 +105,7 @@
 			}
 		},
 		mounted(){
-			getUserId(this);
+//			getUserId(this);
 			//todos 获取登录用户wechatId
 //			console.log(document.cookie);
 //				let cookies = document.cookie
@@ -148,7 +148,7 @@
 				})
 			},
 			changeNickname:function(){
-				updateUser({member_id:this.$store.getters.user.userId,nickname:this.nickname})
+				updateUser({nickname:this.nickname})
 				.then(res=>{
 					if(res.status == "200"){
 						this.tip = res.data.msg
@@ -159,7 +159,7 @@
 				})
 			},
 			changePwd:function(){
-				updateUser({member_id:this.$store.getters.user.userId,password:this.newP,pwd_old:this.pwd_old})
+				updateUser({password:this.newP,pwd_old:this.pwd_old})
 				.then(res=>{
 					if(res.status == "200"){
 						this.tip = res.data.msg

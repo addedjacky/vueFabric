@@ -131,7 +131,7 @@
 						//在将七牛返回的信息回传给后台
 						return uploadImg({
 							'imgUrl':(domain+res.data.key),
-							'memberId':_this.$store.getters.user.userId,
+//							'memberId':_this.$store.getters.user.userId,
 							'imgHash':res.data.hash
 						})
 					},(err)=>{
