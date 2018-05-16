@@ -36,13 +36,9 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      // '/boards/images': {
-      //   target: 'http://192.168.3.249:8904/', //赵玉
-      //   changeOrigin: true,
       
-      // },
       '/api': { //替换代理地址名称
-        target: 'http://192.168.14.174:8999', //代理地址  //测试环境'http://192.168.14.174:8999', 
+        target: '', //代理地址  
         changeOrigin: true, //可否跨域
       }
       
