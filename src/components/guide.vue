@@ -32,7 +32,6 @@ export default {
 						this.$store.commit("setClasses",res.data);
 						this.classFliy = this.$store.getters.images.classes;
 					}
-//					console.log(res)
 				},(err)=>{
 					
 				})
